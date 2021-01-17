@@ -1,0 +1,727 @@
+<html>
+
+<head>
+
+<title>adamada</title>
+
+
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+			
+	<script src="jquery-ui/jquery-ui.js"></script>
+			
+	<link href="jquery-ui/jquery-ui.css" rel="stylesheet">
+	 
+	 
+	<!-- navcss --> 
+	<style type="text/css">
+	
+	
+		/* set header to top ends of page */
+		body {
+		margin:0px;
+		padding:0px;
+		font-family: Arial, Helvetica, sans-serif;
+		background-image: url("images/background.jpg") !important;
+		background-position:center;}
+		
+		#navbar{
+		position:absolute;
+		top:30px;
+		left:40px;
+		width:100%;
+		height:50px;
+		padding:20px;
+		font-size:20px;}
+	
+		#navleft{
+		float:left;
+		position:absolute;
+		top:75px;
+		right:60%}
+		
+		#navright{
+		float:right;
+		position:absolute;
+		left:60%;
+		top:75px;}
+		
+		#navimg{
+		position:absolute;
+		left:48.5%;
+		top:30px;
+		width:50px;}
+		
+		#navright u:before{
+		content: "\00a0\00a0\00a0\00a0";
+		}
+		
+		#navleft u:after{
+		content: "\00a0\00a0\00a0\00a0";
+		}
+		
+		.navlinks a{
+		text-decoration:none;
+		color:white;
+		padding:10px;
+		}
+		
+		#fullpage{
+	
+		margin-top:100px;
+		width:100%;;}
+		
+	
+	
+	</style>
+		
+	<!--modal-->
+	<style>
+			/* The Modal (background) */
+		.modal {
+		  display: none; /* Hidden by default */
+		  position: fixed; /* Stay in place */
+		  z-index: 1; /* Sit on top */
+		  left: 0;
+		  top: 0;
+		  width: 100%; /* Full width */
+		  height: 100%; /* Full height */
+		  overflow: auto; /* Enable scroll if needed */
+		  background-color: rgb(0,0,0); /* Fallback color */
+		  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+		}
+		
+		
+		/* Modal Header */
+.modal-header {
+  padding: 2px 16px;
+  background-color: #A1003C;
+  color: white;
+}
+		
+		/* Modal Body */
+.modal-body {padding: 2px 16px;}
+
+/* Modal Footer */
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #A1003C;
+  color: white;}
+
+		/* Modal Content */
+.modal-content {
+  position: relative;
+  top:100px;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 300px ;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+		/* The Close Button */
+		.close {
+		  color: #aaa;
+		  float: right;
+		  font-size: 28px;
+		  font-weight: bold;
+		}
+
+		.close:hover,
+		.close:focus {
+		  color: black;
+		  text-decoration: none;
+		  cursor: pointer;
+		}
+		
+		/* Add Animation */
+@keyframes animatetop {
+  from {top: -300px; opacity: 0}
+  to {top: 100px; opacity: 1}
+}
+
+		.image_off, #glow:hover .image_on{
+		   display:none;
+		   height:400px;
+		   width:auto;
+		}
+		.image_on, #glow:hover .image_off{
+		   display:block;
+		   height:400px;
+		   width:auto;
+		}
+		
+		
+			
+	</style>
+
+		<!-- hexagon menu -->
+	<style>
+			@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+			*{
+			  box-sizing: border-box;
+			  margin: 0;
+			  padding: 0;
+			}
+			body 
+			{
+			  font-family: 'Poppins', sans-serif;
+			}
+			.honeycomb
+			{
+			  display: -webkit-box;
+			  display: flex;
+			  flex-wrap: wrap;
+			  list-style: none;
+			  -webkit-box-pack: center;
+			  justify-content: center;
+			  -webkit-box-align: center;
+			  align-items: center;
+			  max-width: 1200px;
+			  margin: 0 auto;
+			  padding: 0;
+			  transform: translateY(80px)translateX(40px);
+
+
+			}
+
+			.honeycomb-cell
+			{
+			  -webkit-box-flex: 0;
+			  flex: 0 1 250px;
+			  max-width: 250px;
+			  height: 137.5px;
+			  margin: 65.4px 12.5px 25px;
+			  position: relative;
+			  padding: 0.5em;
+			  text-align: center;
+			  z-index: 1;
+			  box-shadow: 0px 0px 15px 0 rgba(0,0,0,0.1);
+			}
+			.honeycomb-cell_img
+			{
+			  object-fit: cover;
+			  object-position: center;
+			  filter: grayscale(100%);
+			}
+			.honeycomb-cell_title
+			{
+			  height: 100%;
+			  display: -webkit-box;
+			  display: flex;
+			  -webkit-box-orient: vertical;
+			  -webkit-box-direction: normal;
+			  flex-direction: column;
+			  -webkit-box-pack: center;
+			  justify-content: center;
+			  -webkit-hyphens: auto;
+			  hyphens: auto;
+			  word-break: break-word;
+			  text-transform: uppercase;
+			  color: #fff;
+			  font-weight: 700;
+			  font-size: 1.75em;
+			  transition: opacity 350ms;
+			}
+			.honeycomb-cell_title > small
+			{
+			  font-weight: 300;
+			  margin-top: 0.25em;
+			}
+			.honeycomb-cell::before,
+			.honeycomb-cell::after
+			{
+			  content: '';
+			}
+			.honeycomb-cell::before,
+			.honeycomb-cell::after,
+			.honeycomb-cell_img
+			{
+			  top: -50%;
+			  left: 0;
+			  width: 100%;
+			  height: 200%;
+			  display: block;
+			  position: absolute;
+			  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+			  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+			  z-index: -1;
+			}
+			.honeycomb-cell::before
+			{
+			  background: #A1003C;
+			  transform: scale(1.055);
+			}
+			.honeycomb-cell::after
+			{
+			  background: #111111;
+			  opacity: 0.7;
+			  transition: opacity 350ms;
+			  -webkit-transition: opacity 350ms;
+			}
+			.honeycomb-cell:hover
+			.honeycomb-cell_title
+			{
+			  opacity: 0;
+			}
+			.honeycomb-cell:hover
+			.honeycomb-cell_img
+			{
+			  filter: grayscale(0%);
+			}
+			.honeycomb-cell:hover::before
+			{
+			  background: #fc5130;
+			}
+			.honeycomb-cell:hover::after
+			{
+			  opacity: 0;
+			}
+			.honeycomb_Hidden
+			{
+			  display: none !important;
+			  opacity: 0;
+			  width: 250px;
+			  margin: 0 12.5px;
+			}
+
+			@media (max-width: 550px) 
+			{
+			  .honeycomb-cell 
+			  {
+				margin: 81.25px 25px;
+			  }
+			}
+
+
+			@media (min-width: 550px) and (max-width: 825px) 
+			{
+			  .honeycomb-cell:nth-child(3n) 
+			  {
+				margin-right: calc(50% - 125px);
+				margin-left: calc(50% - 125px);
+			  }
+
+			  .honeycomb_Hidden:nth-child(3n + 5) 
+			  {
+				display: block;
+			  }
+			}
+
+
+			@media (min-width: 825px) and (max-width: 1100px) {
+			 
+			  .honeycomb-cell:nth-child(5n + 4) 
+			  {
+				margin-left: calc(50% - 275px);
+			  }
+
+			  .honeycomb-cell:nth-child(5n + 5) 
+			  {
+				margin-right: calc(50% - 275px);
+			  }
+
+			  .honeycomb_Hidden:nth-child(5n), 
+			  .honeycomb_Hidden:nth-child(5n + 3) 
+			  {
+				display: block;
+			  }
+			}
+			@media (min-width: 1100px) 
+			{
+			  .honeycomb-cell:nth-child(7n + 5) {
+				margin-left: calc(50% - 400px);
+			  }
+
+			  .honeycomb-cell:nth-child(7n + 7), 
+			  .honeycomb-cell:nth-child(7n + 5):nth-last-child(2) 
+			  {
+				margin-right: calc(50% - 400px);
+			  }
+
+			  .honeycomb_Hidden:nth-child(7n + 7), 
+			  .honeycomb_Hidden:nth-child(7n + 9), 
+			  .honeycomb_Hidden:nth-child(7n + 11) 
+			  {
+				display: block;
+			  }
+			}
+
+
+</style>
+	
+
+</head>
+
+
+<body>
+
+	
+<div id="navbar">
+
+
+	<div id="navleft" class="navlinks">
+  <a href="mysite.html"><u>HOME</u></a>
+  <a href="photoshop.html"><u>PHOTOSHOP</u></a>
+  <a href="illustrator.html"><u>ILLUSTRATOR</u></a>
+	</div>
+	
+	
+    <img src="images/logo.png" id="navimg">
+  
+
+    <div id="navright" class="navlinks">
+    <a href="webdev.html"><u>WEB DEVELOPPING</u></a>
+    <a href="signin.html"><u>SIGN IN</u></a>
+	<a href="contactus.html"><u>CONTACT US</u></a>
+	</div>
+
+
+</div>
+
+
+<ul class="honeycomb" id="fullpage">
+    <li class="honeycomb-cell" id="modal1">
+        <img class="honeycomb-cell_img" src="images/photoshop.png">
+        <div class="honeycomb-cell_title">Photoshop</div>
+    </li>
+    <li class="honeycomb-cell" id="modal2">
+        <img class="honeycomb-cell_img" src="images/illustrator.png">
+        <div class="honeycomb-cell_title">Illustrator</div>
+    </li>
+    <li class="honeycomb-cell" id="modal3">
+        <img class="honeycomb-cell_img" src="images/web.png">
+        <div class="honeycomb-cell_title">Web Developping</div>
+    </li>
+    <li class="honeycomb-cell" id="modal4">
+        <img class="honeycomb-cell_img" src="images/blog.jpg">
+        <div class="honeycomb-cell_title">Blog</div>
+    </li>
+    <li class="honeycomb-cell" id="modal5">
+        <img class="honeycomb-cell_img" src="img/work5.jpg">
+        <div class="honeycomb-cell_title"><small>Contact Information</small></div>
+    </li>
+    <li class="honeycomb-cell" id="modal6">
+        <img class="honeycomb-cell_img" src="img/work06.jpg">
+        <div class="honeycomb-cell_title"><small>Resume</small></div>
+    </li>
+    <li class="honeycomb-cell" id="modal7">
+        <img class="honeycomb-cell_img" src="images/playpause.webp" width=50px>
+        <div class="honeycomb-cell_title"><small></small></div>
+    </li>
+    <!--<li class="honeycomb-cell honeycomb_jHidden">
+    </li> -->
+</ul>
+
+
+<!--modals-->
+<div>
+<div id="modal1c" class="modal">
+
+	<div class="modal-content">
+	
+	<div class="modal-header">
+    <span class="close">&times;</span>
+    <h2>first</h2>
+	</div>
+  
+	<div class="modal-body">
+    <p>Some text in the Modal Body</p>
+    <p>Some other text...</p>
+	<a id="glow"><img class="image_on" src="images/glow.jpg" alt="logo" /><img class="image_off" src="images/glowr.jpg" alt="logo" /></a>
+	</div>
+	
+	<div class="modal-footer">
+    <h3>Modal Footer</h3>
+	</div>
+	</div>
+</div>
+
+<div id="modal2c" class="modal">
+
+	<div class="modal-content">
+	
+	<div class="modal-header">
+    <span class="close">&times;</span>
+    <h2>second</h2>
+	</div>
+  
+	<div class="modal-body">
+    <p>Some text in the Modal Body</p>
+    <p>Some other text...</p>
+	<img class="modalimg" src="images/banana.jpg">
+	</div>
+	
+	<div class="modal-footer">
+    <h3>Modal Footer</h3>
+	</div>
+	</div>
+</div>
+
+<div id="modal3c" class="modal">
+
+	<div class="modal-content">
+	
+	<div class="modal-header">
+    <span class="close">&times;</span>
+    <h2>third</h2>
+	</div>
+  
+	<div class="modal-body">
+    <p>Some text in the Modal Body</p>
+    <p>Some other text...</p>
+	<img class="modalimg" src="images/banana.jpg">
+	</div>
+	
+	<div class="modal-footer">
+    <h3>Modal Footer</h3>
+	</div>
+	</div>
+</div>
+
+<div id="modal4c" class="modal">
+
+	<div class="modal-content">
+	
+	<div class="modal-header">
+    <span class="close">&times;</span>
+    <h2>fourth</h2>
+	</div>
+  
+	<div class="modal-body">
+    <p>Some text in the Modal Body</p>
+    <p>Some other text...</p>
+	<img class="modalimg" src="images/banana.jpg">
+	</div>
+	
+	<div class="modal-footer">
+    <h3>Modal Footer</h3>
+	</div>
+	</div>
+</div>
+
+<div id="modal5c" class="modal">
+
+	<div class="modal-content">
+	
+	<div class="modal-header">
+    <span class="close">&times;</span>
+    <h2>fifth</h2>
+	</div>
+  
+	<div class="modal-body">
+    <p>Some text in the Modal Body</p>
+    <p>Some other text...</p>
+	<img class="modalimg" src="images/banana.jpg">
+	</div>
+	
+	<div class="modal-footer">
+    <h3>Modal Footer</h3>
+	</div>
+	</div>
+</div>
+
+<div id="modal6c" class="modal">
+
+	<div class="modal-content">
+	
+	<div class="modal-header">
+    <span class="close">&times;</span>
+    <h2>sixth</h2>
+	</div>
+  
+	<div class="modal-body">
+    <p>Some text in the Modal Body</p>
+    <p>Some other text...</p>
+	<img class="modalimg" src="images/banana.jpg">
+	</div>
+	
+	<div class="modal-footer">
+    <h3>Modal Footer</h3>
+	</div>
+	</div>
+</div>
+
+
+<div id="modal7c" class="modal">
+
+	<div class="modal-content">
+	
+	<div class="modal-header">
+    <span class="close">&times;</span>
+    <h2>second</h2>
+	</div>
+  
+	<div class="modal-body">
+    <p>Some text in the Modal Body</p>
+    <p>Some other text...</p>
+	<img class="modalimg" src="images/banana.jpg">
+	</div>
+	
+	<div class="modal-footer">
+    <h3>Modal Footer</h3>
+	</div>
+	</div>
+</div>
+
+</div>
+
+<audio id="sasuke">
+	<source src="audio/sasuke.mp3" type="audio/mpeg">
+</audio>
+
+
+<script>
+
+
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+document.getElementById("modal1").onclick = function() {
+  window.location.href = "photoshop.html";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  document.getElementById("modal1c").style.display = "none";
+}
+
+// SECONDGet the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[1];
+
+// When the user clicks on the button, open the modal
+document.getElementById("modal2").onclick = function() {
+  window.location.href = "illustrator.html";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  document.getElementById("modal2c").style.display = "none";
+}
+
+// THIRDGet the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[2];
+
+// When the user clicks on the button, open the modal
+document.getElementById("modal3").onclick = function() {
+  window.location.href = "webdev.html";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  document.getElementById("modal3c").style.display = "none";
+}
+
+// FOURTHGet the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[3];
+
+// When the user clicks on the button, open the modal
+document.getElementById("modal4").onclick = function() {
+  window.location.href = "signin.html";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  document.getElementById("modal4c").style.display = "none";
+}
+
+// FIFTHGet the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[4];
+
+// When the user clicks on the button, open the modal
+document.getElementById("modal5").onclick = function() {
+  window.location.href = "contactus.html";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  document.getElementById("modal5c").style.display = "none";
+}
+
+// SIXTHGet the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[5];
+
+// When the user clicks on the button, open the modal
+document.getElementById("modal6").onclick = function() {
+
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  document.getElementById("modal6c").style.display = "none";
+}
+
+
+
+// SEVENTHGet the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[6];
+
+new Audio('audio/sasuke.mp3').play();
+
+var audio = document.getElementById("sasuke");
+var x = 0
+
+// When the user clicks on the button, open the modal
+document.getElementById("modal7").onclick = function() {
+	if (x == 0){ 
+	audio.play();
+	x = 1;}
+	else {
+	audio.pause();
+	x = 0;}
+	
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  document.getElementById("modal7c").style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == document.getElementById("modal1c")) {
+    document.getElementById("modal1c").style.display = "none";
+  }
+  if (event.target == document.getElementById("modal2c")) {
+    document.getElementById("modal2c").style.display = "none";
+  }
+  if (event.target == document.getElementById("modal3c")) {
+    document.getElementById("modal3c").style.display = "none";
+  }
+  if (event.target == document.getElementById("modal4c")) {
+    document.getElementById("modal5c").style.display = "none";
+  }
+  if (event.target == document.getElementById("modal6c")) {
+    document.getElementById("modal6c").style.display = "none";
+  }
+  if (event.target == document.getElementById("modal7c")) {
+    document.getElementById("modal7c").style.display = "none";
+  }
+}
+
+</script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

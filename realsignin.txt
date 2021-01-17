@@ -1,0 +1,109 @@
+<html>
+
+<head>
+
+<title>adamada</title>
+
+	<!--<link rel="stylesheet" type="text/css" href="style.css">--> 
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+			
+	<script src="jquery-ui/jquery-ui.js"></script>
+			
+	<link href="jquery-ui/jquery-ui.css" rel="stylesheet">
+	 
+	 
+	<!-- navcss --> 
+	<style type="text/css">
+	
+	
+		/* set header to top ends of page */
+		body {
+		margin:0px;
+		padding:0px;
+		width:1000px;
+		font-family: Arial, Helvetica, sans-serif;
+		background-image: url("images/background.jpg");
+		background-position:center;}
+	
+		#back { color: white;
+				padding:30px;}
+		
+		#logo {
+				position:fixed;
+				left:45%
+				}
+				
+		#username {padding:10px;
+				position: relative;
+				top:20px;
+				right:50px;
+				color:white;}
+				
+		#pass 	{padding:10px;
+				position:relative;
+
+				right:50px;
+				color:white;}
+				
+		#submit	{position:fixed;
+				left:49%;
+				margin:10px;}
+		
+		#useri 	{position:fixed;
+				left:49%;}
+	
+		#passi 	{position:fixed;
+				left:49%;}
+				
+		#signup {position:fixed;
+				left:37%;
+				margin:20px;}
+		#login {position:fixed;
+				left:37%;
+				margin:20px;
+				display:none;}
+		
+	</style>
+	
+
+</head>
+
+
+<body>
+
+<a href="mysite.html" id="back"> <- Back</a>
+
+<div id="logo"><img src="images/logo.png"</div>
+
+<div id="inputarea">
+
+<form method="post" id="signup">
+
+    <input type="email" name="email" placeholder="Your Email">
+    <input type="password" name="password" placeholder="Password">
+    <input type="checkbox" name="stayLoggedIn" value=1>
+    <input type="hidden" name="signUp" value="1">
+    <input type="submit" name="submit" value="Sign Up!">
+
+</form>
+
+<form method="post" id="login">
+
+    <input type="email" name="email" placeholder="Your Email">
+    <input type="password" name="password" placeholder="Password">
+    <input type="checkbox" name="stayLoggedIn" value=1>
+    <input type="hidden" name="signUp" value="0">
+    <input type="submit" name="submit" value="Log In!">
+
+</form>
+
+</div>
+
+
+</body>
+
+</html>
+
+
+
