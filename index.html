@@ -28,8 +28,8 @@
 		#navbar{
 		position:absolute;
 		top:30px;
-		left:40px;
-		width:100%;
+		left:23px;
+		width:95%;
 		height:50px;
 		padding:20px;
 		font-size:20px;}
@@ -52,19 +52,23 @@
 		top:30px;
 		width:50px;}
 		
-		#navright u:before{
+		/*#navright u:before{
 		content: "\00a0\00a0\00a0\00a0";
 		}
 		
 		#navleft u:after{
 		content: "\00a0\00a0\00a0\00a0";
-		}
+		}*/
 		
 		.navlinks a{
-		text-decoration:none;
 		color:white;
 		padding:10px;
+		text-decoration: none;
 		}
+		
+		.navlinks a:hover{
+		text-decoration:underline;
+		color:blue;}
 		
 		#fullpage{
 	
@@ -93,34 +97,34 @@
 		
 		
 		/* Modal Header */
-.modal-header {
-  padding: 2px 16px;
-  background-color: #A1003C;
-  color: white;
-}
-		
-		/* Modal Body */
-.modal-body {padding: 2px 16px;}
+		.modal-header {
+		  padding: 2px 16px;
+		  background-color: #A1003C;
+		  color: white;
+		}
+				
+				/* Modal Body */
+		.modal-body {padding: 2px 16px;}
 
-/* Modal Footer */
-.modal-footer {
-  padding: 2px 16px;
-  background-color: #A1003C;
-  color: white;}
+		/* Modal Footer */
+		.modal-footer {
+		  padding: 2px 16px;
+		  background-color: #A1003C;
+		  color: white;}
 
-		/* Modal Content */
-.modal-content {
-  position: relative;
-  top:100px;
-  background-color: #fefefe;
-  margin: auto;
-  padding: 0;
-  border: 1px solid #888;
-  width: 300px ;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-  animation-name: animatetop;
-  animation-duration: 0.4s
-}
+				/* Modal Content */
+		.modal-content {
+		  position: relative;
+		  top:100px;
+		  background-color: #fefefe;
+		  margin: auto;
+		  padding: 0;
+		  border: 1px solid #888;
+		  width: 300px ;
+		  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+		  animation-name: animatetop;
+		  animation-duration: 0.4s
+		}
 
 		/* The Close Button */
 		.close {
@@ -138,10 +142,10 @@
 		}
 		
 		/* Add Animation */
-@keyframes animatetop {
-  from {top: -300px; opacity: 0}
-  to {top: 100px; opacity: 1}
-}
+		@keyframes animatetop {
+		from {top: -300px; opacity: 0}
+		to {top: 100px; opacity: 1}
+		}
 
 		.image_off, #glow:hover .image_on{
 		   display:none;
@@ -181,10 +185,10 @@
 			  justify-content: center;
 			  -webkit-box-align: center;
 			  align-items: center;
-			  max-width: 1200px;
+			  max-width: 1100px;
 			  margin: 0 auto;
 			  padding: 0;
-			  transform: translateY(80px)translateX(40px);
+			  transform: translateY(100px)translateX(0px);
 
 
 			}
@@ -365,9 +369,9 @@
 
 
 	<div id="navleft" class="navlinks">
-  <a href="index.html"><u>HOME</u></a>
-  <a href="photoshop.html"><u>PHOTOSHOP</u></a>
-  <a href="illustrator.html"><u>ILLUSTRATOR</u></a>
+  <a href="index.html">HOME</a>
+  <a href="photoshop.html">PHOTOSHOP</a>
+  <a href="illustrator.html">ILLUSTRATOR</a>
 	</div>
 	
 	
@@ -375,9 +379,9 @@
   
 
     <div id="navright" class="navlinks">
-    <a href="webdev.html"><u>WEB DEVELOPPING</u></a>
-    <a href="signin.html"><u>SIGN IN</u></a>
-	<a href="contactus.html"><u>CONTACT US</u></a>
+    <a href="webdev.html">WEB DEVELOPPING</a>
+    <a href="signin.html">SIGN IN</a>
+	<a href="contactus.html">CONTACT US</a>
 	</div>
 
 
@@ -398,7 +402,7 @@
         <div class="honeycomb-cell_title">Web Developping</div>
     </li>
     <li class="honeycomb-cell" id="modal4">
-        <img class="honeycomb-cell_img" src="images/blog.jpg">
+        <img class="honeycomb-cell_img" src="images/blog.png">
         <div class="honeycomb-cell_title">Blog</div>
     </li>
     <li class="honeycomb-cell" id="modal5">
@@ -410,7 +414,7 @@
         <div class="honeycomb-cell_title"><small>Resume</small></div>
     </li>
     <li class="honeycomb-cell" id="modal7">
-        <img class="honeycomb-cell_img" src="images/playpause.webp" width=50px>
+        <img class="honeycomb-cell_img" src="images/logo.png">
         <div class="honeycomb-cell_title"><small></small></div>
     </li>
     <!--<li class="honeycomb-cell honeycomb_jHidden">

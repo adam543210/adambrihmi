@@ -72,7 +72,7 @@
 
 <body>
 
-<a href="mysite.html" id="back"> <- Back</a>
+<a href="index.html" id="back"> <- Back</a>
 
 <div id="logo"><img src="images/logo.png"</div>
 

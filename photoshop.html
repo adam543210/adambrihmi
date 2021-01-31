@@ -28,8 +28,8 @@
 		#navbar{
 		position:absolute;
 		top:30px;
-		left:40px;
-		width:100%;
+		left:23px;
+		width:95%;
 		height:50px;
 		padding:20px;
 		font-size:20px;}
@@ -52,19 +52,23 @@
 		top:30px;
 		width:50px;}
 		
-		#navright u:before{
+		/*#navright u:before{
 		content: "\00a0\00a0\00a0\00a0";
 		}
 		
 		#navleft u:after{
 		content: "\00a0\00a0\00a0\00a0";
-		}
+		}*/
 		
 		.navlinks a{
-		text-decoration:none;
 		color:white;
 		padding:10px;
+		text-decoration: none;
 		}
+		
+		.navlinks a:hover{
+		text-decoration:underline;
+		color:blue;}
 		
 		#fullpage{
 	
@@ -116,7 +120,7 @@
 		  margin: auto;
 		  padding: 0;
 		  border: 1px solid #888;
-		  width: 300px ;
+		  width: 434px ;
 		  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 		  animation-name: animatetop;
 		  animation-duration: 0.4s
@@ -145,13 +149,9 @@
 
 		.image_off, #glow:hover .image_on{
 		   display:none;
-		   height:400px;
-		   width:auto;
 		}
 		.image_on, #glow:hover .image_off{
 		   display:block;
-		   height:400px;
-		   width:auto;
 		}
 		
 		.image_off, #zombie:hover .image_on{
@@ -192,12 +192,10 @@
 			  justify-content: center;
 			  -webkit-box-align: center;
 			  align-items: center;
-			  max-width: 1200px;
+			  max-width: 1100px;
 			  margin: 0 auto;
 			  padding: 0;
-			  transform: translateY(80px)translateX(40px);
-
-
+			  transform: translateY(100px)translateX(0px);
 			}
 
 			.honeycomb-cell
@@ -376,9 +374,9 @@
 
 
 	<div id="navleft" class="navlinks">
-  <a href="index.html"><u>HOME</u></a>
-  <a href="photoshop.html"><u>PHOTOSHOP</u></a>
-  <a href="illustrator.html"><u>ILLUSTRATOR</u></a>
+  <a href="index.html">HOME</a>
+  <a href="photoshop.html">PHOTOSHOP</a>
+  <a href="illustrator.html">ILLUSTRATOR</a>
 	</div>
 	
 	
@@ -386,9 +384,9 @@
   
 
     <div id="navright" class="navlinks">
-    <a href="webdev.html"><u>WEB DEVELOPPING</u></a>
-    <a href="signin.html"><u>SIGN IN</u></a>
-	<a href="contactus.html"><u>CONTACT US</u></a>
+    <a href="webdev.html">WEB DEVELOPPING</a>
+    <a href="signin.html">SIGN IN</a>
+	<a href="contactus.html">CONTACT US</a>
 	</div>
 
 
@@ -405,8 +403,8 @@
         <div class="honeycomb-cell_title">zombie</div>
     </li>
     <li class="honeycomb-cell" id="modal3">
-        <img class="honeycomb-cell_img" src="">
-        <div class="honeycomb-cell_title">Coming soon</div>
+        <img class="honeycomb-cell_img" src="images/cartoon.jpg">
+        <div class="honeycomb-cell_title">Cartoon</div>
     </li>
     <li class="honeycomb-cell" id="modal4">
         <img class="honeycomb-cell_img" src="">
@@ -441,14 +439,9 @@
 	</div>
   
 	<div class="modal-body">
-    <p>Some text in the Modal Body</p>
-    <p>Some other text...</p>
-	<a id="glow"><img class="image_on" src="images/glow.jpg" alt="logo" /><img class="image_off" src="images/glowr.jpg" alt="logo" /></a>
+	<a id="glow"><img class="image_on" src="images/glow.jpg"  style="width:400px; height:auto;"/><img class="image_off" src="images/glowr.jpg" style="width:400px; height:auto;"/></a>
 	</div>
 	
-	<div class="modal-footer">
-    <h3>Modal Footer</h3>
-	</div>
 	</div>
 </div>
 
@@ -462,14 +455,9 @@
 	</div>
   
 	<div class="modal-body">
-    <p>Some text in the Modal Body</p>
-    <p>Some other text...</p>
-	<a id="zombie"><img class="image_on" src="images/zombie.png" alt="logo" /><img class="image_off" src="images/zombie.jpg" alt="logo" /></a>
+	<a id="zombie"><img class="image_on" src="images/zombie.png" style="width:400px; height:auto;" /><img class="image_off" src="images/zombie.jpg" style="width:400px; height:auto;" /></a>
 	</div>
 	
-	<div class="modal-footer">
-    <h3>Modal Footer</h3>
-	</div>
 	</div>
 </div>
 
@@ -479,18 +467,14 @@
 	
 	<div class="modal-header">
     <span class="close">&times;</span>
-    <h2>third</h2>
+    <h2>Cartoon</h2>
 	</div>
   
 	<div class="modal-body">
-    <p>Some text in the Modal Body</p>
-    <p>Some other text...</p>
-	<img class="modalimg" src="images/banana.jpg">
+	<a id="glow"><img class="image_on" src="images/cartoon.png" style="width:400px; height:auto;"/><img class="image_off" src="images/cartoon.jpg" style="width:400px; height:auto;"/></a>
+
 	</div>
-	
-	<div class="modal-footer">
-    <h3>Modal Footer</h3>
-	</div>
+
 	</div>
 </div>
 

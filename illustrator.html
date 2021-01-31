@@ -28,8 +28,8 @@
 		#navbar{
 		position:absolute;
 		top:30px;
-		left:40px;
-		width:100%;
+		left:23px;
+		width:95%;
 		height:50px;
 		padding:20px;
 		font-size:20px;}
@@ -52,19 +52,23 @@
 		top:30px;
 		width:50px;}
 		
-		#navright u:before{
+		/*#navright u:before{
 		content: "\00a0\00a0\00a0\00a0";
 		}
 		
 		#navleft u:after{
 		content: "\00a0\00a0\00a0\00a0";
-		}
+		}*/
 		
 		.navlinks a{
-		text-decoration:none;
 		color:white;
 		padding:10px;
+		text-decoration: none;
 		}
+		
+		.navlinks a:hover{
+		text-decoration:underline;
+		color:blue;}
 		
 		#fullpage{
 	
@@ -160,7 +164,7 @@
 			}
 			.honeycomb
 			{
-			  display: -webkit-box;
+			    display: -webkit-box;
 			  display: flex;
 			  flex-wrap: wrap;
 			  list-style: none;
@@ -168,12 +172,10 @@
 			  justify-content: center;
 			  -webkit-box-align: center;
 			  align-items: center;
-			  max-width: 1200px;
+			  max-width: 1100px;
 			  margin: 0 auto;
 			  padding: 0;
-			  transform: translateY(80px)translateX(40px);
-
-
+			  transform: translateY(100px)translateX(0px);
 			}
 
 			.honeycomb-cell
@@ -352,9 +354,9 @@
 
 
 	<div id="navleft" class="navlinks">
-  <a href="index.html"><u>HOME</u></a>
-  <a href="photoshop.html"><u>PHOTOSHOP</u></a>
-  <a href="illustrator.html"><u>ILLUSTRATOR</u></a>
+  <a href="index.html">HOME</a>
+  <a href="photoshop.html">PHOTOSHOP</a>
+  <a href="illustrator.html">ILLUSTRATOR</a>
 	</div>
 	
 	
@@ -362,9 +364,9 @@
   
 
     <div id="navright" class="navlinks">
-    <a href="webdev.html"><u>WEB DEVELOPPING</u></a>
-    <a href="signin.html"><u>SIGN IN</u></a>
-	<a href="contactus.html"><u>CONTACT US</u></a>
+    <a href="webdev.html">WEB DEVELOPPING</a>
+    <a href="signin.html">SIGN IN</a>
+	<a href="contactus.html">CONTACT US</a>
 	</div>
 
 
@@ -373,20 +375,20 @@
 
 <ul class="honeycomb" id="fullpage">
     <li class="honeycomb-cell" id="modal1">
-        <img class="honeycomb-cell_img" src="images/allstar.png">
-        <div class="honeycomb-cell_title">Allstar Hospital</div>
+        <img class="honeycomb-cell_img" src="images/HairMed.png">
+        <div class="honeycomb-cell_title">Hair Med</div>
     </li>
     <li class="honeycomb-cell" id="modal2">
         <img class="honeycomb-cell_img" src="images/sydto.png">
         <div class="honeycomb-cell_title">SYD.TO</div>
     </li>
     <li class="honeycomb-cell" id="modal3">
-        <img class="honeycomb-cell_img" src="">
-        <div class="honeycomb-cell_title">Coming soon</div>
+        <img class="honeycomb-cell_img" src="images/WingQueen.png">
+        <div class="honeycomb-cell_title">Wing Queen</div>
     </li>
     <li class="honeycomb-cell" id="modal4">
-        <img class="honeycomb-cell_img" src="">
-        <div class="honeycomb-cell_title">Coming soon</div>
+        <img class="honeycomb-cell_img" src="images/allstar.png">
+        <div class="honeycomb-cell_title">Allstar Hospital</div>
     </li>
     <li class="honeycomb-cell" id="modal5">
         <img class="honeycomb-cell_img" src="img/work5.jpg">
@@ -413,11 +415,11 @@
 	
 	<div class="modal-header">
     <span class="close">&times;</span>
-    <h2>Allstar Hospital</h2>
+    <h2>Hair Med</h2>
 	</div>
   
 	<div class="modal-body">
-	<img src="images/allstar.png" />
+	<img src="images/HairMed.png" style="width: 565px"/>
 	</div>
 	
 	<div class="modal-footer">
@@ -436,7 +438,7 @@
 	</div>
   
 	<div class="modal-body">
-	<img class="modalimg" src="images/sydto.png" width="500px">
+	<img class="modalimg" src="images/sydto.png" width="565px">
 	</div>
 	
 	<div class="modal-footer">
@@ -451,18 +453,13 @@
 	
 	<div class="modal-header">
     <span class="close">&times;</span>
-    <h2>third</h2>
+    <h2>Wing Queen</h2>
 	</div>
   
 	<div class="modal-body">
-    <p>Some text in the Modal Body</p>
-    <p>Some other text...</p>
-	<img class="modalimg" src="images/banana.jpg">
+	<img src="images/WingQueen.png"  width="565px"/>
 	</div>
 	
-	<div class="modal-footer">
-    <h3>Modal Footer</h3>
-	</div>
 	</div>
 </div>
 
@@ -472,18 +469,13 @@
 	
 	<div class="modal-header">
     <span class="close">&times;</span>
-    <h2>fourth</h2>
+    <h2>Allstar Hospital</h2>
 	</div>
   
 	<div class="modal-body">
-    <p>Some text in the Modal Body</p>
-    <p>Some other text...</p>
-	<img class="modalimg" src="images/banana.jpg">
+	<img src="images/allstar.png"  width="565px"/>
 	</div>
 	
-	<div class="modal-footer">
-    <h3>Modal Footer</h3>
-	</div>
 	</div>
 </div>
 
