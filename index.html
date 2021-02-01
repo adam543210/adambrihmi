@@ -574,10 +574,6 @@
 
 </div>
 
-<audio id="sasuke">
-	<source src="audio/sasuke.mp3" type="audio/mpeg">
-</audio>
-
 
 <script>
 
@@ -671,16 +667,6 @@ new Audio('audio/sasuke.mp3').play();
 var audio = document.getElementById("sasuke");
 var x = 0
 
-// When the user clicks on the button, open the modal
-document.getElementById("modal7").onclick = function() {
-	if (x == 0){ 
-	audio.play();
-	x = 1;}
-	else {
-	audio.pause();
-	x = 0;}
-	
-}
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
