@@ -1,0 +1,148 @@
+<html>
+
+
+<head>
+<style type="text/css">
+	
+	
+		/* set header to top ends of page */
+		body {
+		margin:0px;
+		padding:0px;
+		font-family: Arial, Helvetica, sans-serif;
+		background-image: url("images/background.jpg") !important;
+		background-position:center;}
+		
+		#back {
+		position: fixed;
+		top:200px;
+		left:50%;
+		height:270px;
+		width: 1000px;
+		margin-left:-500px;
+		background-color:white;
+		opacity:90%;
+		padding: 20px 50px;
+		}
+
+		
+</style>
+<!-- navcss --> 
+	<style type="text/css">
+	
+	
+		/* set header to top ends of page */
+		body {
+		margin:0px;
+		padding:0px;
+		font-family: Arial, Helvetica, sans-serif;
+		background-image: url("images/background.jpg") !important;
+		background-position:center;}
+		
+		#navbar{
+		position:absolute;
+		top:30px;
+		left:23px;
+		width:95%;
+		height:50px;
+		padding:20px;
+		font-size:20px;}
+	
+		#navleft{
+		float:left;
+		position:absolute;
+		top:75px;
+		right:60%}
+		
+		#navright{
+		float:right;
+		position:absolute;
+		left:60%;
+		top:75px;}
+		
+		#navimg{
+		position:absolute;
+		left:48.5%;
+		top:30px;
+		width:50px;}
+		
+		/*#navright u:before{
+		content: "\00a0\00a0\00a0\00a0";
+		}
+		
+		#navleft u:after{
+		content: "\00a0\00a0\00a0\00a0";
+		}*/
+		
+		.navlinks a{
+		color:white;
+		padding:10px;
+		text-decoration: none;
+		}
+		
+		.navlinks a:hover{
+		text-decoration:underline;
+		color:blue;}
+		
+		#fullpage{
+	
+		margin-top:100px;
+		width:100%;;}
+		
+	
+	
+	</style>
+
+
+</head>
+
+<body>
+
+<div id="navbar">
+
+
+	<div id="navleft" class="navlinks">
+  <a href="index.html">HOME</a>
+  <a href="photoshop.html">PHOTOSHOP</a>
+  <a href="illustrator.html">ILLUSTRATOR</a>
+	</div>
+	
+	
+    <a href="index.html"><img src="images/logo.png" id="navimg"></a>
+  
+
+    <div id="navright" class="navlinks">
+    <a href="webdev.html">WEB DEVELOPPING</a>
+    <a href="aboutus.html">ABOUT US</a>
+	<a href="contactus.html">CONTACT US</a>
+	</div>
+
+
+</div>
+
+
+
+
+<!-- background -->
+<div id="back" class="back">
+
+	<h1>About Us</h1>
+	<p>Hey! My name is Adam Brihmi and welcome to my website. I am a graphic designer who specializes in photoshop, illustrator and website development and have chosen to build this website to showcase some of my work.</p>
+	<p>Have fun roaming through my site, I really hope you enjoy what you see. If you are interested in collaborating for your next project then feel free to contact me in the "contact us" section of my site.</p>
+	<p>Cheers, <br> Adam Brihmi</p>
+
+</div>
+
+
+<script>
+
+document.getElementById("button").onclick = function()	{
+		window.location.replace("index.html");
+}
+</script>
+
+
+
+</body>
+
+</html>
